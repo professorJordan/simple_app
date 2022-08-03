@@ -3,7 +3,7 @@ version: '3.9'
 services:
   nginx:
     container_name: nginx
-    image: 934955203171.dkr.ecr.us-east-1.amazonaws.com/nginx
+    image: "nginx"
     restart: on-failure
     depends_on:
       - client
@@ -13,16 +13,16 @@ services:
       
   backend:
     container_name: backend
-    image: 934955203171.dkr.ecr.us-east-1.amazonaws.com/backend
+    image: "backend"
     restart: on-failure
-    ports:
-      - "3001:3001"
+    #ports:
+    #  - "3001:3001"
 
   client:
     container_name: client
-    image: 934955203171.dkr.ecr.us-east-1.amazonaws.com/client:latest
+    image: "client"
     restart: on-failure
     depends_on:
       - backend
-    ports:
-      - "3000:3000"
+    #ports:
+   #   - "3000:3000"

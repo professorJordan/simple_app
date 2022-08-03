@@ -16,7 +16,7 @@ function App() {
     try {
       async function getMessage() {
         const response = await axios.get(
-          "http://localhost:3001/api/users"
+          `/backend/api/users`
         );
         console.log(response);
         setResult(response.data.name);
