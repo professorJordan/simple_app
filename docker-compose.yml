@@ -3,7 +3,7 @@ version: '3.9'
 services:
   nginx:
     container_name: nginx
-    image:
+    image: nginx
     restart: on-failure
     depends_on:
       - client
@@ -13,14 +13,14 @@ services:
       
   backend:
     container_name: backend
-    image: 
+    image: backend
     restart: on-failure
     ports:
       - "3001:3001"
 
   client:
     container_name: client
-    image: 
+    image: client
     restart: on-failure
     depends_on:
       - backend
