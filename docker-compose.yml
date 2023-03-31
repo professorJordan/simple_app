@@ -20,10 +20,11 @@ services:
       - "3001:3001"
 
   client:
-    container_name: client
+    container_name: client1
     image: client
     restart: on-failure
     depends_on:
       - backend
     ports:
       - "3000:3000"
+
