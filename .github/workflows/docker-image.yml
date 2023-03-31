@@ -35,7 +35,7 @@ jobs:
         ECR_REPOSITORY: "test_repo"
         IMAGE_TAG: v1
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:/backend/$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:/backend/$IMAGE_TAG
-        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:/backend/$IMAGE_TAG"
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:backend/$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
