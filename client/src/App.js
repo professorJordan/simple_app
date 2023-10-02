@@ -28,7 +28,7 @@ function App() {
 
 
 
-    setResult("success!");
+    setResult("success");
     console.log(result)
   }
 
