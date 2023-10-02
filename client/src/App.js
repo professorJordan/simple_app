@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div>
-      <p>welcome to the simple app! It works</p>
+      <p>welcome to the simple app!</p>
       <form onSubmit={handleSubmit}>
         <button variant="primary" type="submit">test</button >
       </form>
